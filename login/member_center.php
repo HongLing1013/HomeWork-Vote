@@ -18,7 +18,7 @@
   歡迎<?=$_SESSION['user'];?>
   <hr>
   <?php
-  echo '序號:'.$user['id']."<br>";
+  echo '序號:'.$user['id']."<br>";//將資料庫會員資料顯示出來
   echo '帳號:'.$user['acc']."<br>";
   echo '密碼:'.$user['pw']."<br>";
   echo '姓名:'.$user['name']."<br>";
