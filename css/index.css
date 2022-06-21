@@ -11,8 +11,10 @@ body{
 nav{
   height: 1rem;
   display: flex;
-  flex-direction: row-reverse;
-  width: 75rem;
+  justify-content: space-between;
+  width: 8rem;
+  margin-left: 65rem;
+  margin-top: 1rem;
 }
 
 .container{

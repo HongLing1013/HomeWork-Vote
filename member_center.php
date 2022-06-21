@@ -22,10 +22,7 @@
   $user=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);//導出資料
   ?>
 <body>
-<nav>
-    <a href="index.php">回首頁</a>
-    <a href="logout.php">登出</a>
-  </nav>
+<?php include "./layout/header.php";?>
 <div class="container">
   <h1>會員中心</h1>
   歡迎<?=$_SESSION['user'];?>
@@ -54,5 +51,6 @@
     <p>&nbsp;</p>
     <a class="remove" href="remove_acc.php?id=<?=$user['id'];?>">刪除帳號</a>
 </div>
+<?php include "./layout/footer.php";?>
 </body>
 </html>

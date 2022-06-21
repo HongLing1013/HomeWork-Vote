@@ -8,9 +8,7 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-<nav>
-    <a href="index.php">回首頁</a>
-  </nav>
+<?php include "./layout/header.php";?>
 <div class="container">
   <h1>帳號登入</h1>
   <br>
@@ -43,5 +41,6 @@
   </div>
   </form>
 </div>
+<?php include "./layout/footer.php";?>
 </body>
 </html>
