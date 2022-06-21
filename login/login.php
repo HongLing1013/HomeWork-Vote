@@ -16,9 +16,19 @@
     .btns{
       text-align: center;
     }
+    h2{
+      color: red;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
+  <?php
+  if(isset($_GET['error'])){
+    echo"<h2>{$_GET['error']}</h2>";
+  }
+  
+  ?>
   <form action="chklogin.php" method="post">
   <table>
     <tr>
