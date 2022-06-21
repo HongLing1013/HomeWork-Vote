@@ -65,47 +65,47 @@
     |--|--|--|--|--|
     |id|int(11)|--|true|序號|
     |acc|varchar(12)|--|--|帳號|
-    |pw|varchar(16)|--|--|--|
-    |name|varchar(12)|--|--|--|
-    |birthday|date|--|--|--|
-    |gender|tinyint(1)|--|--|--|
-    |addr|varchar(64)|--|--|--|
-    |education|varchar(32)|--|--|--|
-    |reg_date|date|--|--|--|
+    |pw|varchar(16)|--|--|密碼|
+    |name|varchar(12)|--|--|名稱|
+    |birthday|date|--|--|生日|
+    |gender|tinyint(1)|--|--|性別|
+    |addr|varchar(64)|--|--|住址|
+    |education|varchar(32)|--|--|學歷|
+    |reg_date|date|--|--|註冊時間|
 * admins
     |名稱|型態|預設值|A_I|備註|
     |--|--|--|--|--|
     |id|int(11)|--|true|序號|
     |acc|varchar(12)|--|--|帳號|
-    |pw|varchar(16)|--|--|--|
-    |name|varchar(12)|--|--|--|
+    |pw|varchar(16)|--|--|密碼|
+    |name|varchar(12)|--|--|名稱|
 * subjects
     |名稱|型態|預設值|A_I|備註|
     |--|--|--|--|--|
     |id|int(11)|--|true|序號|
     |subject|varchar(128)|--|--|主題描述|
-    |type_id|int(11)|--|--|--|
+    |type_id|int(11)|--|--|密碼|
     |multiple|boolean(1)|--|--|單/複選|
     |mulit_limit|tinyint(2)|1|--|單/複選項目數|
-    |start|date|--|--|--|
-    |end|date|--|--|--|
-    |total|int(11)|--|--|--|
+    |start|date|--|--|開始時間|
+    |end|date|--|--|結束時間|
+    |total|int(11)|--|--|投票人數統計|
 * options
     |名稱|型態|預設值|A_I|備註|
     |--|--|--|--|--|
     |id|int(11)|--|true|序號|
     |option|varchar(128)|--|--|選項描述|
-    |subject_id|int(11)|--|--|--|
-    |total|int(11)|--|--|--|
+    |subject_id|int(11)|--|--|主題|
+    |total|int(11)|--|--|投票人數統計|
 
 * log
     |名稱|型態|預設值|A_I|備註|
     |--|--|--|--|--|
     |id|int(11)|--|true|序號|
     |user_id|int(11)|--|--|投票者|
-    |sujbect_id|int(11)|--|--|--|
-    |option_id|int(11)|--|--|--|
-    |vote_time|timestamp|--|--|--|
+    |sujbect_id|int(11)|--|--|投票項目|
+    |option_id|int(11)|--|--|選項|
+    |vote_time|timestamp|--|--|投票時間|
 
 * type
     |名稱|型態|預設值|A_I|備註|
