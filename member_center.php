@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>會員中心</title>
+  <link rel="stylesheet" href="./css/index.css">
   <style>
     .remove{
       color: #eee;
@@ -21,7 +22,10 @@
   $user=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);//導出資料
   ?>
 <body>
-<a href="logout.php">登出</a>
+  <nav>
+    <a href="logout.php">登出</a>
+  </nav>
+<div class="container">
   <h1>會員中心</h1>
   歡迎<?=$_SESSION['user'];?>
   <hr>
@@ -48,5 +52,6 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <a class="remove" href="remove_acc.php?id=<?=$user['id'];?>">刪除帳號</a>
+</div>
 </body>
 </html>

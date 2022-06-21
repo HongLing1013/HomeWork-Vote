@@ -5,8 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>編輯會員資料</title>
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+<div class="container">
   <h1>編輯會員</h1>
   <?php
     include_once "connect.php";
@@ -49,5 +51,6 @@
       <input type="submit" value="送出"><input type="reset" value="重置">
     </div>
   </form>
+</div>
 </body>
 </html>

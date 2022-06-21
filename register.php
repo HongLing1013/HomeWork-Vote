@@ -5,9 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>會員註冊</title>
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+<div class="container">
   <h1>會員註冊</h1>
+
   <form action="/add_member.php" method="post">
     <table>
       <tr>
@@ -44,5 +47,6 @@
       <input type="reset" value="重置">
     </div>
   </form>
+</div>
 </body>
 </html>

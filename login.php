@@ -5,30 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>會員登入</title>
-  <style>
-    table{
-      margin: auto;
-      width: 400px;
-    }
-    table td{
-      padding: 1rem;
-    }
-    .btns{
-      text-align: center;
-    }
-    h2{
-      color: red;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+<div class="container">
+  <h1>帳號登入</h1>
+  <br>
+  <br>
+  <br>
   <?php
   if(isset($_GET['error'])){
     echo"<h2>{$_GET['error']}</h2>";//如果錯誤的話顯示帳密錯誤訊息
   }
   ?>
   <form action="chklogin.php" method="post">
+
   <table>
     <tr>
       <td>帳號</td>
@@ -48,5 +39,6 @@
     <input type="reset" value="重置">
   </div>
   </form>
+</div>
 </body>
 </html>
