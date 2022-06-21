@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>會員註冊</h1>
-  <form action="add_member.php" method="post">
+  <form action="/add_member.php" method="post">
     <table>
       <tr>
         <td>帳號</td>
