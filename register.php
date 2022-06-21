@@ -8,9 +8,11 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+  <!-- 上方選單 -->
 <nav>
     <?php include "./layout/header.php";?>
   </nav>
+  <!-- 主要內容 -->
 <div class="container">
   <h1>會員註冊</h1>
 
@@ -51,6 +53,7 @@
     </div>
   </form>
 </div>
+<!-- 頁尾 -->
 <?php include "./layout/footer.php";?>
 </body>
 </html>

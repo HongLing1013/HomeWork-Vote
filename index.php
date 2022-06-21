@@ -14,17 +14,18 @@ include_once "connect.php"; //連線資料庫
 
 <body>
 
+<!-- 上方選單 -->
 <nav>
     <?php include "./layout/front_nav.php";?>
   </nav>
 
+  <!-- 主要內容 -->
   <div class="container">
     <h1>投票列表</h1>
 
-    <!-- 撈出資料庫會員資料 -->
     <?php
 
-    $sql = "select * from `users` "; //撈出users這個資料表的全部內容
+    $sql = "select * from `users` "; //撈出users這個資料表的全部會員資料
 
     $users = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
@@ -34,6 +35,7 @@ include_once "connect.php"; //連線資料庫
     ?>
   </div>
 
+  <!-- 頁尾 -->
   <?php include "./layout/footer.php";?>
 </body>
 

@@ -8,9 +8,12 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+  <!-- 上方選單 -->
 <nav>
     <?php include "./layout/header.php";?>
   </nav>
+
+  <!-- 主要內容 -->
 <div class="container">
   <h1>忘記密碼</h1>
   <form action="chk_acc.php" method="post">
@@ -19,6 +22,8 @@
     <input type="submit" value="檢查">
   </form>
 </div>
+
+<!-- 頁尾 -->
 <?php include "./layout/footer.php";?>
 </body>
 </html>

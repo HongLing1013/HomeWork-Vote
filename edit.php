@@ -8,10 +8,13 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+  <!-- 上方選單 -->
   <nav>
     <?php include "./layout/header.php";?>
     <?php include "./layout/front_nav.php";?>
   </nav>
+
+  <!-- 主要內容 -->
 <div class="container">
   <h1>編輯會員</h1>
   <?php
@@ -56,6 +59,7 @@
     </div>
   </form>
 </div>
+<!-- 頁尾宣告 -->
 <?php include "./layout/footer.php";?>
 </body>
 </html>

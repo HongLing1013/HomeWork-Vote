@@ -8,9 +8,11 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+  <!-- 上方選單 -->
 <nav>
     <?php include "./layout/header.php";?>
   </nav>
+  <!-- 主要內容 -->
 <div class="container">
   <h1>帳號登入</h1>
   <br>
@@ -43,6 +45,7 @@
   </div>
   </form>
 </div>
+<!-- 頁尾 -->
 <?php include "./layout/footer.php";?>
 </body>
 </html>

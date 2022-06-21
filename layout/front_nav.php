@@ -1,4 +1,4 @@
-
+<!-- 上方選單顯示 -->
     <?php
     if (isset($_SESSION['user'])) {
     ?>
