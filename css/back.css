@@ -59,3 +59,16 @@ footer{
   text-align: center;
   margin-top: 1rem;
 }
+
+/* common components */
+.btn{
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: gray;
+  padding: 0.25rem 0.75rem;
+  font-size: 1.1rem;
+  box-sizing: 0 0 10px #ccc;
+}
+
+
