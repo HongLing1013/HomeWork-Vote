@@ -13,7 +13,6 @@ if(empty($user)){//如果資料庫有這個帳號的話給密碼
 }else{
   echo "你當初提供的密碼提示為:".$user['passnote'];
 }
-
 ?>
 
 <a href="index.php">回首頁</a>

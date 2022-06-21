@@ -2,7 +2,7 @@
 include "connect.php";//連線資料庫
 
 $acc=$_POST['acc'];
-$pw=$_POST['pw'];//接收帳號密碼
+$pw=md5($_POST['pw']);//接收帳號密碼並且把密碼改成MD5
 
 $sql="SELECT count(*) FROM `users` WHERE `acc`='$acc' && `pw`='$pw'";//尋找資料表的acc跟pw是否相符
 $chk=$pdo->query($sql)->fetchColumn();
