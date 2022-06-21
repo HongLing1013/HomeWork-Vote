@@ -34,6 +34,10 @@
         <td>email</td>
         <td><input type="email" name="email" id=""></td>
       </tr>
+      <tr>
+        <td>密碼提示</td>
+        <td><input type="passnote" name="passnote" id=""></td>
+      </tr>
     </table>
     <div>
       <input type="submit" value="送出">

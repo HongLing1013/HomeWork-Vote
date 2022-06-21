@@ -39,6 +39,10 @@
         <td>email</td>
         <td><input type="email" name="email" value="<?=$user['email'];?>"></td>
       </tr>
+      <tr>
+        <td>密碼提示</td>
+        <td><input type="text" name="passnote" value="<?=$user['passnote'];?>"></td>
+      </tr>
     </table>
     <div>
       <input type="hidden" name="id" value="<?=$_POST['id'];?>">

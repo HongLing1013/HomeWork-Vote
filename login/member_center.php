@@ -25,6 +25,7 @@
   echo '生日:'.$user['birthday']."<br>";
   echo '地址:'.$user['addr']."<br>";
   echo 'email:'.$user['email']."<br>";
+  echo '密碼提示:'.$user['passnote']."<br>";
   ?>
     <form action="edit.php" method="post">
       <input type="hidden" name="id" value="<?=$user['id'];?>"> <!-- 隱藏按鈕帶參數過去 -->
