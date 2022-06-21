@@ -68,10 +68,7 @@
     |pw|varchar(16)|--|--|密碼|
     |name|varchar(12)|--|--|名稱|
     |birthday|date|--|--|生日|
-    |gender|tinyint(1)|--|--|性別|
     |addr|varchar(64)|--|--|住址|
-    |education|varchar(32)|--|--|學歷|
-    |reg_date|date|--|--|註冊時間|
 * admins
     |名稱|型態|預設值|A_I|備註|
     |--|--|--|--|--|
@@ -84,7 +81,7 @@
     |--|--|--|--|--|
     |id|int(11)|--|true|序號|
     |subject|varchar(128)|--|--|主題描述|
-    |type_id|int(11)|--|--|密碼|
+    |type_id|int(11)|--|--|主題類別|
     |multiple|boolean(1)|--|--|單/複選|
     |mulit_limit|tinyint(2)|1|--|單/複選項目數|
     |start|date|--|--|開始時間|
