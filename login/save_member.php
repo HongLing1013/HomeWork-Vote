@@ -1,0 +1,16 @@
+<?php
+include_once "connect.php"; //連線資料庫
+
+$sql="UPDATE `users` -- 更新資料表
+      SET    `pw`='{$_POST['pw']}',
+             `name`='{$_POST['name']}',
+             `birthday`='{$_POST['birthday']}',
+             `addr`='{$_POST['addr']}',
+             `email`='{$_POST['email']}'
+      WHERE  `id`='{$_POST['id']}'";
+
+$pdo->exec($sql);
+
+header("location:member_center.php"); // 更新完導向會員頁
+
+?>

@@ -17,7 +17,7 @@
     <table>
       <tr>
         <td>帳號</td>
-        <td><input type="text" name="acc" value="<?=$user['acc'];?>"></td>
+        <td><?=$user['acc'];?></td>
       </tr>
       <tr>
         <td>密碼</td>
@@ -41,8 +41,8 @@
       </tr>
     </table>
     <div>
-      <input type="submit" value="送出">
-      <input type="reset" value="重置">
+      <input type="hidden" name="id" value="<?=$_POST['id'];?>">
+      <input type="submit" value="送出"><input type="reset" value="重置">
     </div>
   </form>
 </body>
