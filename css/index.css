@@ -34,17 +34,26 @@ h1{
 form{
   justify-content: center;
 }
+
 table{
   margin: auto;
   line-height: 1rem;
 }
+
 table td{
   padding: 1rem;
 }
+
 .btns{
   text-align: center;
 }
+
 h2{
   color: red;
   text-align: center;
+}
+
+footer{
+  text-align: center;
+  margin-top: 1rem;
 }

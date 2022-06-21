@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-<?php include "./layout/header.php";?>
+  <nav>
+    <?php include "./layout/header.php";?>
+    <?php include "./layout/front_nav.php";?>
+  </nav>
 <div class="container">
   <h1>編輯會員</h1>
   <?php

@@ -14,7 +14,9 @@ include_once "connect.php"; //連線資料庫
 
 <body>
 
-<?php include "./layout/header.php";?>
+<nav>
+    <?php include "./layout/front_nav.php";?>
+  </nav>
 
   <div class="container">
     <h1>投票列表</h1>

@@ -22,7 +22,10 @@
   $user=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);//導出資料
   ?>
 <body>
-<?php include "./layout/header.php";?>
+<nav>
+    <?php include "./layout/header.php";?>
+    <?php include "./layout/front_nav.php";?>
+  </nav>
 <div class="container">
   <h1>會員中心</h1>
   歡迎<?=$_SESSION['user'];?>

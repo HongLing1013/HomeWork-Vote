@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-<?php include "./layout/header.php";?>
+<nav>
+    <?php include "./layout/header.php";?>
+  </nav>
 <div class="container">
   <h1>帳號登入</h1>
   <br>

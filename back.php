@@ -7,6 +7,7 @@
   <title>投票管理中心</title>
 </head>
 <body>
-<?php include "./layout/footer.php";?>
+
+    <?php include "./layout/footer.php";?>
 </body>
 </html>
