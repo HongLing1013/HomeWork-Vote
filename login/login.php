@@ -25,9 +25,8 @@
 <body>
   <?php
   if(isset($_GET['error'])){
-    echo"<h2>{$_GET['error']}</h2>";
+    echo"<h2>{$_GET['error']}</h2>";//如果錯誤的話顯示帳密錯誤訊息
   }
-  
   ?>
   <form action="chklogin.php" method="post">
   <table>

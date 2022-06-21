@@ -9,6 +9,7 @@
 <body>
 <a href="logout.php">登出</a>
   <h1>會員中心</h1>
-  歡迎XXX祝你有美好的一天
+  <?php session_start(); ?>
+  歡迎<?=$_SESSION['user'];?>祝你有美好的一天
 </body>
 </html>
