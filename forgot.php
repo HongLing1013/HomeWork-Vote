@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+<nav>
+    <a href="index.php">回首頁</a>
+  </nav>
 <div class="container">
   <h1>忘記密碼</h1>
   <form action="chk_acc.php" method="post">

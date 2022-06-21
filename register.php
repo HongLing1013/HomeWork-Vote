@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+<nav>
+    <a href="index.php">回首頁</a>
+  </nav>
 <div class="container">
   <h1>會員註冊</h1>
 

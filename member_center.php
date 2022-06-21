@@ -22,7 +22,8 @@
   $user=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);//導出資料
   ?>
 <body>
-  <nav>
+<nav>
+    <a href="index.php">回首頁</a>
     <a href="logout.php">登出</a>
   </nav>
 <div class="container">

@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+  <nav>
+    <a href="index.php">回首頁</a>
+    <a href="logout.php">登出</a>
+  </nav>
 <div class="container">
   <h1>編輯會員</h1>
   <?php
