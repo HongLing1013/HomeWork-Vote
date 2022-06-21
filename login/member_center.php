@@ -26,6 +26,9 @@
   echo '地址:'.$user['addr']."<br>";
   echo 'email:'.$user['email']."<br>";
   ?>
-  <button>編輯</button>
+    <form action="edit.php" method="post">
+      <input type="hidden" name="id" value="<?=$user['id'];?>"> <!-- 隱藏按鈕帶參數過去 -->
+      <input type="submit" value="編輯">
+    </form>
 </body>
 </html>
