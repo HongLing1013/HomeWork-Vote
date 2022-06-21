@@ -20,11 +20,12 @@
   <?php
   echo '序號:'.$user['id']."<br>";//將資料庫會員資料顯示出來
   echo '帳號:'.$user['acc']."<br>";
-  echo '密碼:'.$user['pw']."<br>";
+  echo '密碼:'."*******"."<br>";
   echo '姓名:'.$user['name']."<br>";
   echo '生日:'.$user['birthday']."<br>";
   echo '地址:'.$user['addr']."<br>";
   echo 'email:'.$user['email']."<br>";
   ?>
+  <button>編輯</button>
 </body>
 </html>
