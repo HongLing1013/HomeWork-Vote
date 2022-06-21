@@ -5,6 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>會員中心</title>
+  <style>
+    .remove{
+      color: #eee;
+    }
+    .remove:hover{
+      color: red;
+    }
+  </style>
 </head>
   <?php
   include "connect.php";//連接資料庫
@@ -31,5 +39,14 @@
       <input type="hidden" name="id" value="<?=$user['id'];?>"> <!-- 隱藏按鈕帶參數過去 -->
       <input type="submit" value="編輯">
     </form>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <a class="remove" href="remove_acc.php?id=<?=$user['id'];?>">刪除帳號</a>
 </body>
 </html>
