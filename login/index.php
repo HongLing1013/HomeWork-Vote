@@ -21,10 +21,20 @@
     <a href="login.php">登入</a>
     <a href="logout.php">登出</a>
   </nav>
-  <h1>
-    問卷
-  </h1>
+  <h1>問卷</h1>
+
+  <!-- 撈出資料庫會員資料 -->
+  <?php
+  include_once "connect.php"; //連線資料庫
+
+  $sql="select * from `users` ";//撈出users這個資料表的全部內容
+
+  $users=$pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+  foreach($users as $user){
+    echo $user['acc']."<br>";
+  }
+  ?>
+
 </body>
 </html>
-
-<!-- 5/30 No.4 　52:28 -->
