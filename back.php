@@ -21,7 +21,9 @@
     <h1>投票管理中心</h1>
     <?php
     if (isset($_GET['do'])) { //如果有取得do這個頁面的話執行
-      $file = "./back/" . $_GET['do'] . ".php";
+      $file = "./back/" . $_GET['do'] . ".php";//導向網址
+    }
+    if(isset($sile) && file_exists($file)){//判斷如果有檔案在載入
       include $file;
     } else {
     ?>
