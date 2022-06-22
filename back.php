@@ -20,12 +20,12 @@
   <div class="container">
     <h1>投票管理中心</h1>
     <?php
-    if (isset($_GET['do'])) { //如果有取得do這個頁面的話執行
-      $file = "./back/" . $_GET['do'] . ".php";//導向網址
-    }
-    if(isset($file) && file_exists($file)){//判斷如果有檔案在載入
-      include $file;
-    } else {
+      if (isset($_GET['do'])) { //如果有取得do這個頁面的話執行
+        $file = "./back/" . $_GET['do'] . ".php";//導向網址
+      }
+      if(isset($file) && file_exists($file)){//判斷如果有檔案在載入
+        include $file;
+      }else{
     ?>
       <button class=btn onclick="location.href='?do=add_vote'">新增投票</button><!-- get傳值檔案名稱 -->
       <div>投票列表</div>
