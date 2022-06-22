@@ -1,5 +1,5 @@
 <!-- 新增表單傳送到處理頁面 -->
-<form action="../api/add_vote.php" method="post">
+<form action="./api/add_vote.php" method="post">
   <div>
     <label for="subject">投票主題:</label>
     <input type="text" name="subject" id="subject">
@@ -8,7 +8,7 @@
   <div id="options">
     <div>
       <label>選項:</label>
-      <input type="text" name="option">
+      <input type="text" name="option[]">
     </div>
   </div>
   <input type="submit" value="新增">
@@ -17,7 +17,7 @@
 
 <script>
   function addOption(){
-    let opt=`<div><label>選項:</label><input type="text" name="option"></div>`;
+    let opt=`<div><label>選項:</label><input type="text" name="option[]"></div>`;
     let opts=document.getElementById('options').innerHTML;//取得ID為option的HTML節點 增加 並改變他
     opts=opts+opt;
     document.getElementById('options').innerHTML=opts;
