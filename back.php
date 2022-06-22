@@ -35,14 +35,18 @@
 
       <div>
         <ul>
+
           <?php
           $subjects=all('subjects'); //取得所有投票列表
           foreach($subjects as $subject){
             echo "<li class='list-items'>";
             echo $subject['subject']; //只取得欄位
+            echo "<a class='edit' href='?do=edit&id={$subject['id']}'>編輯</a>";
+            echo "<a class='del' href='?do=del&id={$subject['id']}'>刪除</a>";
             echo "</li>";
           }
           ?>
+          
         </ul>
       </div>
 
