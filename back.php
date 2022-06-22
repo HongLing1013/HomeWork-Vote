@@ -1,3 +1,5 @@
+<?php include_once "./api/base.php";  // 因為要使用到資料庫 所以在最開端先引入 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +32,20 @@
       }else{
     ?>
       <button class=btn onclick="location.href='?do=add_vote'">新增投票</button><!-- get傳值檔案名稱 -->
-      <div>投票列表</div>
+
+      <div>
+        <ul>
+          <?php
+          $subjects=all('subjects'); //取得所有投票列表
+          foreach($subjects as $subject){
+            echo "<li class='list-items'>";
+            echo $subject['subject']; //只取得欄位
+            echo "</li>";
+          }
+          ?>
+        </ul>
+      </div>
+
     <?php
       }
     ?>

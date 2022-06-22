@@ -10,6 +10,7 @@ body{
   background-image: linear-gradient(to top, #fed6e3 0%, #a8edea 100%);
 }
 
+/* 上方導覽 */
 nav{
   height: 1rem;
   display: flex;
@@ -19,6 +20,7 @@ nav{
   margin-top: 1rem;
 }
 
+/* 主要內容 */
 .container{
   width: 160vh;
   height: 80vh;
@@ -55,6 +57,7 @@ h2{
   text-align: center;
 }
 
+/* 尾版 */
 footer{
   text-align: center;
   margin-top: 1rem;
@@ -69,6 +72,22 @@ footer{
   padding: 0.25rem 0.75rem;
   font-size: 1.1rem;
   box-sizing: 0 0 10px #ccc;
+}
+
+/* 內頁列表 */
+ul{
+  margin: 1rem 0 1rem 6rem;
+}
+.list-items{
+  padding: 0.5rem;
+  margin: 0.25rem;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+.list-items:hover{
+  background-color: rgb(166, 245, 249);
+  cursor: pointer;
 }
 
 
