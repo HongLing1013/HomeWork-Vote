@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-06-21 03:29:55
+-- 產生時間： 2022-06-23 02:52:14
 -- 伺服器版本： 10.4.24-MariaDB
 -- PHP 版本： 8.1.6
 
@@ -61,6 +61,18 @@ CREATE TABLE `options` (
   `total` int(11) NOT NULL DEFAULT 0 COMMENT '投票人數統計'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- 傾印資料表的資料 `options`
+--
+
+INSERT INTO `options` (`id`, `option`, `subject_id`, `total`) VALUES
+(1, '美而美', 2, 0),
+(2, 'Qbuger', 2, 0),
+(3, '麥當勞', 2, 0),
+(4, 'MOS', 2, 0),
+(5, '豆漿店', 2, 0),
+(6, '大腸麵線', 2, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -77,6 +89,14 @@ CREATE TABLE `subjects` (
   `end` date NOT NULL COMMENT '結束時間',
   `total` int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '投票人數統計'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `subjects`
+--
+
+INSERT INTO `subjects` (`id`, `subject`, `type_id`, `multiple`, `mulit_limit`, `start`, `end`, `total`) VALUES
+(1, '午餐吃什麼', 1, 0, 1, '2022-06-22', '2022-07-02', 0),
+(2, '今天早餐吃什麼', 1, 0, 1, '2022-06-22', '2022-07-02', 0);
 
 -- --------------------------------------------------------
 
@@ -98,14 +118,24 @@ CREATE TABLE `type` (
 CREATE TABLE `users` (
   `id` int(11) UNSIGNED NOT NULL COMMENT '序號',
   `acc` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '帳號',
-  `pw` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '密碼',
+  `pw` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '密碼',
   `name` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '名稱',
   `birthday` date NOT NULL COMMENT '生日',
-  `gender` tinyint(1) UNSIGNED NOT NULL COMMENT '性別',
   `addr` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '住址',
-  `education` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '學歷',
-  `reg_date` date NOT NULL COMMENT '註冊時間'
+  `email` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `passnote` int(36) NOT NULL COMMENT '密碼提示'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `users`
+--
+
+INSERT INTO `users` (`id`, `acc`, `pw`, `name`, `birthday`, `addr`, `email`, `passnote`) VALUES
+(2, 'hollie', '4321', 'hollie', '1989-10-13', '台北市', 'chaohongling1013@gmail.com', 0),
+(3, 'mack', '1234', '阿明', '2000-02-03', '台北市', 'chaohongling1013@gmail.com', 0),
+(4, 'baby', '4321', 'baby', '2000-08-11', '台北市', 'tsubasababy1013@gmail.com', 1234),
+(5, 'mary', '81dc9bdb52d04dc2', 'mary', '1993-02-09', '新北市', 'tsubasababy1013@gmail.com', 0),
+(6, 'aaaa', '65ba841e01d6db7733e90a5b7f9e6f80', 'cccc', '1234-12-31', '123151', 'tsubasababy1013@gmail.com', 23415);
 
 --
 -- 已傾印資料表的索引
@@ -167,13 +197,13 @@ ALTER TABLE `log`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `options`
 --
 ALTER TABLE `options`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '序號';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '序號', AUTO_INCREMENT=7;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '序號';
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '序號', AUTO_INCREMENT=3;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `type`
@@ -185,7 +215,7 @@ ALTER TABLE `type`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '序號';
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '序號', AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
