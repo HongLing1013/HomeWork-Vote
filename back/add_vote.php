@@ -5,6 +5,12 @@
     <input type="text" name="subject" id="subject">
     <input type="button" value="新增選項" onclick="addOption()"> <!-- 點下這個按鈕 執行addOption的內容 -->
   </div>
+  <div id="selector">
+    <input type="radio" name="multiple" value="0" checked>
+    <label>單選</label>
+    <input type="radio" name="multiple" value="1">
+    <label>複選</label>
+  </div>
   <div id="options">
     <div>
       <label>選項:</label>

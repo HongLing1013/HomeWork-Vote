@@ -2,11 +2,12 @@
 <?php
 include_once "base.php";//引入資料庫function
 
-$subject=$_POST['subject'];
+$subject=$_POST['subject'];//接收表單傳來的投票主題內容
 
-$add_subject=[
+$add_subject=[//建立資料庫內容
   'subject'=>$subject,
   'type_id'=>1,
+  'multiple'=>$_POST['multiple'],
   'start'=>date("Y-m-d"),
   'end'=>date("Y-m-d",strtotime("+10 days")),
 ];

@@ -7,8 +7,9 @@ $new_subject=$_POST['subject'];
 
 $subject=find('subjects',$subject_id);
 $subject['subject']=$new_subject;
+$subject['multiple']=$_POST['multiple'];
 
-// save('subjects',$subject);//儲存
+save('subjects',$subject);//儲存
 
 $opts=all("options",['subject_id'=>$subject_id]);//取得資料表內原有的所有資料
 
