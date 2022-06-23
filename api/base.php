@@ -158,8 +158,6 @@ function  to($url){
     header("location:".$url);
 
 }
-
-
 /**
  * $sql - SQL語句字串，取出符合SQL語句的全部資料
  */
