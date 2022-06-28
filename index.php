@@ -1,5 +1,5 @@
 <?php
-include_once "connect.php"; //連線資料庫
+include_once "./api/base.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,17 +22,17 @@ include_once "connect.php"; //連線資料庫
   <!-- 主要內容 -->
   <div class="container">
     <h1>投票列表</h1>
-
     <?php
-
-    $sql = "select * from `users` "; //撈出users這個資料表的全部會員資料
-
-    $users = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-
-    foreach ($users as $user) {
-      echo $user['acc'] . "<br>";
+    if(isset($_GET['do'])){//如果有值可以取得檔案
+      $file='./front/'.$_GET['do'].".php";//仔入
     }
-    ?>
+    if(isset($file) && file_exists($file)){//如果有這個檔案
+      include $file;
+    }else{
+      include "./front/vote_list.php";
+    }
+          ?>
+  </div>
   </div>
 
   <!-- 頁尾 -->
