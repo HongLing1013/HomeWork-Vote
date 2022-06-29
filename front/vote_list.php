@@ -1,4 +1,5 @@
-<div>
+    <h1>投票列表</h1>
+    <div>
   <ul class="list">
     <li class="list-header">
       <div>投票主題：</div>
@@ -14,6 +15,7 @@
       <?php
       }
       ?>
+
       <!-- 投票期間排序 -->
       <?php
       if (isset($_GET['type']) && $_GET['type'] == 'asc') {
@@ -26,6 +28,7 @@
       <?php
       }
       ?>
+
       <!-- 剩餘天數排序 -->
       <?php
       if (isset($_GET['type']) && $_GET['type'] == 'asc') {

@@ -114,3 +114,13 @@ margin: 1rem 0 1rem 6rem;
 .list-header div a{
   color: #ccc;
 }
+
+.result-table{
+  border-collapse: collapse;
+  box-shadow: 0 0 6px #bbb;
+}
+
+.result-table td{
+  padding: 0.25rem;
+  border: 1px solid #ccc;
+}

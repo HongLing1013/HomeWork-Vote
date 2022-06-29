@@ -21,7 +21,7 @@ include_once "./api/base.php";
 
   <!-- 主要內容 -->
   <div class="container">
-    <h1>投票列表</h1>
+
     <?php
     if(isset($_GET['do'])){//如果有值可以取得檔案
       $file='./front/'.$_GET['do'].".php";//仔入

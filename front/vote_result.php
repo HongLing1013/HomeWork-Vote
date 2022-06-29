@@ -8,9 +8,8 @@ $opts=all("options",['subject_id'=>$_GET['id']]);
 <h1 class="text-center"><?=$subject['subject'];?></h1>
 
 <div style="width: 600px;margin:auto">
-  
   <div>總投票數:<?=$subject['total'];?></div>
-  <table>
+  <table class="result-table">
     <tr>
       <td>選項</td>
       <td>投票數</td>
@@ -19,11 +18,16 @@ $opts=all("options",['subject_id'=>$_GET['id']]);
     <?php
     foreach($opts as $opt){
       $total=($subject['total']==0)?1:$subject['total'];
+      $rate=$opt['total']/$total;
     ?>
     <tr>
       <td><?=$opt['option'];?></td>
       <td><?=$opt['total'];?></td>
-      <td><?=$opt['total']/$total;?></td>
+      <td>
+        <!-- 長條圖 -->
+        <div style="display:inline-block;height:24px;background:skyblue;width:<?=300*$rate;?>px;"></div>
+        <?=($rate*100) . "%";?>
+      </td>
     </tr>
     <?php
     }
