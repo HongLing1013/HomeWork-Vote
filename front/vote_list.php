@@ -3,6 +3,10 @@ $p="";
 if(isset($_GET['p'])){
   $p="&p={$_GET['p']}";
 }
+$querystr="";
+if(isset($_GET['order'])){
+  $querystr="&order={$_GET['order']}&type={$_GET['type']}";
+}
 
 
 ?>
@@ -124,7 +128,7 @@ if(isset($_GET['p'])){
     <div class="text-center">
       <?php
       for($i=1;$i<=$pages;$i++){
-        echo "<a href='?p={$i}&{$orderStr}'>&nbsp;";
+        echo "<a href='?p={$i}{$querystr}'>&nbsp;";
         echo $i ;
         echo "&nbsp;</a>";
       }
