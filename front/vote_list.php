@@ -10,7 +10,7 @@
           <?php
           $subjects=all('subjects'); //取得所有投票列表
           foreach($subjects as $subject){//使用迴圈印內容
-            echo "<a href='?do=vote&id={$subject['id']}'>";//要把投票帶去哪
+            echo "<a href='?do=vote_result&id={$subject['id']}'>";//要把投票帶去哪
             echo "<li class='list-items'>";
             echo "<div>{$subject['subject']}</div>";//只取得欄位
 
