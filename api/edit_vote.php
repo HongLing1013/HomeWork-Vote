@@ -7,7 +7,7 @@ $new_subject=$_POST['subject'];
 
 $subject=find('subjects',$subject_id);
 $subject['subject']=$new_subject;
-$subject['multiple']=$_POST['multiple'];
+$subject['type_id']=$_POST['types'];
 
 save('subjects',$subject);//儲存
 

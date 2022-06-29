@@ -8,7 +8,21 @@ $opts=all('options',['subject_id'=>$id]);
 
 <!-- 新增表單傳送到處理頁面 -->
 <form action="./api/edit_vote.php" method="post">
-  <div>
+<!-- 分類 -->
+<div>
+    <select name="types" id="types">
+      <?php
+      $types=all("types");
+      foreach($types as $type){
+        $selected=($subj['type_id']==$type['id'])?'selected':'';
+        echo "<option value='{$type['id']}' $selected>";
+        echo $type['name'];
+        echo "</option>";
+      }
+      ?>
+    </select>
+  </div>  
+<div>
     <label for="subject">投票主題:</label>
     <input type="text" name="subject" id="subject" value="<?=$subj['subject'];?>">
     <input type="button" value="新增選項" onclick="addOption()"> <!-- 點下這個按鈕 執行addOption的內容 -->

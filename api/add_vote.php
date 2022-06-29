@@ -6,7 +6,7 @@ $subject=$_POST['subject'];//接收表單傳來的投票主題內容
 
 $add_subject=[//建立資料庫內容
   'subject'=>$subject,
-  'type_id'=>1,
+  'type_id'=>$_POST['types'],
   'multiple'=>$_POST['multiple'],
   'start'=>date("Y-m-d"),
   'end'=>date("Y-m-d",strtotime("+10 days")),
