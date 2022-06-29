@@ -68,10 +68,17 @@
       }else{
         $orderStr = "ORDER BY `{$_SESSION['order']['col']}` {$_SESSION['order']['type']}";
       }
-
-
     }
-    $subjects = all('subjects', $orderStr); //取得所有投票列表
+    // 建立分業所需的變數群
+    $total= math('subjects','count','id');
+    $div=3;//每頁有幾筆資料
+    $pages=ceil($total/$div);//總頁數
+    $now=isset($_GET['p'])?$_GET['p']:1;//如果沒有其他頁數就顯示第一頁
+    $start=($now-1)*$div;
+    $page_rows=" limit $start,$div";
+    
+
+    $subjects = all('subjects', $orderStr . $page_rows); //取得所有投票列表
     foreach ($subjects as $subject) { //使用迴圈印內容
       echo "<a href='?do=vote_result&id={$subject['id']}'>"; //要把投票帶去哪
       echo "<li class='list-items'>";
@@ -105,4 +112,14 @@
     ?>
 
   </ul>
+    <div class="text-center">
+      <?php
+      for($i=1;$i<=$pages;$i++){
+        echo "<a href='?p={$i}&{$orderStr}'>&nbsp;";
+        echo $i ;
+        echo "&nbsp;</a>";
+      }
+      ?>
+    </div>
+  
 </div>
