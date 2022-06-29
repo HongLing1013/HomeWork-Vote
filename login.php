@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>會員登入</title>
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
   <!-- 上方選單 -->
@@ -14,38 +16,55 @@
   </nav>
   <!-- 主要內容 -->
 <div class="container">
-  <h1>帳號登入</h1>
-  <br>
-  <br>
-  <br>
+  
+
+<form action="chklogin.php" method="post">
+
+<h1>帳號登入</h1>
   <?php
   if(isset($_GET['error'])){
     echo"<h2>{$_GET['error']}</h2>";//如果錯誤的話顯示帳密錯誤訊息
   }
   ?>
-  <form action="chklogin.php" method="post">
+  
+  <div class="txtb">
+      <input type="text">
+      <span data-placeholder="帳號"></span>
+    </div>
 
-  <table>
-    <tr>
-      <td>帳號</td>
-      <td><input type="text" name="acc" id=""></td>
-    </tr>
-    <tr>
-      <td>密碼</td>
-      <td><input type="password" name="pw" id=""></td>
-    </tr>
-    <tr>
-      <td><a href="register.php">尚未註冊?</a></td>
-      <td><a href="forgot.php">忘記密碼?</a></td>
-    </tr>
-  </table>
-  <div class="btns">
-    <input type="submit" value="登入">
-    <input type="reset" value="重置">
-  </div>
+    <div class="txtb">
+      <input type="password">
+      <span data-placeholder="密碼"></span>
+    </div>
+
+    <div>
+      <input type="submit" class="logbtn" value="登入">
+    </div>
+
+    <div class="bottom-text">
+      <a href="register.php">尚未註冊?</a>
+      <a href="forgot.php">忘記密碼?</a>
+    </div>
+
   </form>
 </div>
 <!-- 頁尾 -->
 <?php include "./layout/footer.php";?>
+
+<script type="text/javascript">
+    $(".txtb input").on("focus",function(){
+      $(this).addClass("focus");
+    });
+
+    $(".txtb input").on("blur",function(){
+      if($(this).val() == "")
+      $(this).removeClass("focus");
+    });
+
+
+  </script>
+
 </body>
+
+
 </html>
