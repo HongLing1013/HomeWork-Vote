@@ -133,3 +133,22 @@ margin: 1rem 5rem;
   border: 0;
   border-bottom: 1px solid #504d78 ;
 }
+
+.vote-item{
+  margin: 1rem 25rem;
+}
+
+.logbtn{
+  margin: 0 auto;
+  display: block;
+  width: 20%;
+  height: 8vh;
+  border: none;
+  background-image: linear-gradient(to top, #fed6e3 0%, #a8edea 100%,#fed6e3 0%,#a8edea 100%,#fed6e3 0% );
+  background-size: 200%;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+  border-radius: 20px;
+  margin-top: 10vh;
+}

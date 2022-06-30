@@ -1,3 +1,4 @@
+
 <?php
 include_once "./api/base.php";
 
@@ -29,7 +30,7 @@ foreach ($opts as $opt) {
 <?php
 }
 ?>
-<input type="submit" value="投票">
-<input type="reset" value="重置">
-<input type="button" value="放棄" onclick="location.href='index.php'">
+    <div>
+      <input type="submit" class="logbtn" value="投票">
+    </div>
 </form>
