@@ -5,7 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>編輯會員資料</title>
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <style>
+    
+    table{
+      margin: 2rem 5rem;
+    }
+    input{
+      margin: 1rem;
+    }
+    .logbtn{
+      margin-top: 0.5rem;
+      width: 40%;
+    }
+  </style>
 </head>
 <body>
   <!-- 上方選單 -->
@@ -55,7 +68,7 @@
     </table>
     <div>
       <input type="hidden" name="id" value="<?=$_POST['id'];?>">
-      <input type="submit" value="送出"><input type="reset" value="重置">
+      <input type="submit" class="logbtn" value="送出">
     </div>
   </form>
 </div>

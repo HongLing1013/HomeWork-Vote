@@ -12,6 +12,7 @@
     }
     h2{
       margin-bottom: 1rem;
+      text-align: center;
     }
     div{
       margin-left: 15rem;
