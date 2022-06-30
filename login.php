@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>會員登入</title>
-  <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/login.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -22,8 +21,10 @@
 
 <h1>帳號登入</h1>
   <?php
-  if(isset($_GET['error'])){
-    echo"<h2>{$_GET['error']}</h2>";//如果錯誤的話顯示帳密錯誤訊息
+  if(isset($_GET['error'])){//如果錯誤的話顯示帳密錯誤訊息
+    ?>
+    <h2 style="color: red;"><?=$_GET['error'];?></h2>
+<?php
   }
   ?>
   
