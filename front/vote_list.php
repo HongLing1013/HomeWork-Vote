@@ -113,7 +113,7 @@ if(isset($_GET['filter'])){
     }
 
     $total= math('subjects','count','id',$filter);
-    $div=5;//每頁有幾筆資料
+    $div=10;//每頁有幾筆資料
     $pages=ceil($total/$div);//總頁數
     $now=isset($_GET['p'])?$_GET['p']:1;//如果沒有其他頁數就顯示第一頁
     $start=($now-1)*$div;
