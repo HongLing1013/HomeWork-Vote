@@ -3,6 +3,7 @@
     if (isset($_SESSION['user'])) {
     ?>
       <a href="logout.php">登出</a><!-- 如果有登入資料就顯示登出 -->
+      <a href="member_center.php">會員中心</a>
     <?php
     } else {
     ?>
