@@ -28,12 +28,12 @@
   ?>
   
   <div class="txtb">
-      <input type="text">
+      <input type="text" name="acc">
       <span data-placeholder="帳號"></span>
     </div>
 
     <div class="txtb">
-      <input type="password">
+      <input type="password" name="pw">
       <span data-placeholder="密碼"></span>
     </div>
 
@@ -60,8 +60,6 @@
       if($(this).val() == "")
       $(this).removeClass("focus");
     });
-
-
   </script>
 
 </body>

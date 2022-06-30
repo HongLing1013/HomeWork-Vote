@@ -6,6 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>會員註冊</title>
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    .container{
+    width: 100vh;
+    }
+    h1{
+  line-height: 0.5rem;
+}
+.txtb{
+  margin: 2rem 8rem;
+}
+.txtb input{
+  margin-top: 0.3vh;
+  height: 20px;
+}
+.logbtn{
+  margin-top: 5vh;
+}
+  </style>
 </head>
 <body>
   <!-- 上方選單 -->
@@ -14,46 +34,58 @@
   </nav>
   <!-- 主要內容 -->
 <div class="container">
-  <h1>會員註冊</h1>
+  
+  <form action="./add_member.php" method="post">
+    <h1>會員註冊</h1>
 
-  <form action="/add_member.php" method="post">
-    <table>
-      <tr>
-        <td>帳號</td>
-        <td><input type="text" name="acc" id=""></td>
-      </tr>
-      <tr>
-        <td>密碼</td>
-        <td><input type="password" name="pw" id=""></td>
-      </tr>
-      <tr>
-        <td>名稱</td>
-        <td><input type="text" name="name" id=""></td>
-      </tr>
-      <tr>
-        <td>生日</td>
-        <td><input type="date" name="birthday" id=""></td>
-      </tr>
-      <tr>
-        <td>住址</td>
-        <td><input type="text" name="addr" id=""></td>
-      </tr>
-      <tr>
-        <td>email</td>
-        <td><input type="email" name="email" id=""></td>
-      </tr>
-      <tr>
-        <td>密碼提示</td>
-        <td><input type="passnote" name="passnote" id=""></td>
-      </tr>
-    </table>
-    <div>
-      <input type="submit" value="送出">
-      <input type="reset" value="重置">
+    <div class="txtb">
+      <input type="text" name="acc">
+      <span data-placeholder="帳號"></span>
     </div>
+    <div class="txtb">
+      <input type="password" name="pw">
+      <span data-placeholder="密碼"></span>
+    </div>
+    <div class="txtb">
+      <input type="text" name="name">
+      <span data-placeholder="名字"></span>
+    </div>
+    <div class="txtb">
+      <input type="date" name="birthday">
+      <span data-placeholder="生日"></span>
+    </div>
+    <div class="txtb">
+      <input type="text" name="addr">
+      <span data-placeholder="住址"></span>
+    </div>
+    <div class="txtb">
+      <input type="email" name="email">
+      <span data-placeholder="e-mail"></span>
+    </div>
+    <div class="txtb">
+      <input type="passnote" name="passnote">
+      <span data-placeholder="密碼提示"></span>
+    </div>
+
+    <div>
+      <input type="submit" class="logbtn" value="送出">
+    </div>
+
   </form>
 </div>
 <!-- 頁尾 -->
 <?php include "./layout/footer.php";?>
+
+<script type="text/javascript">
+    $(".txtb input").on("focus",function(){
+      $(this).addClass("focus");
+    });
+
+    $(".txtb input").on("blur",function(){
+      if($(this).val() == "")
+      $(this).removeClass("focus");
+    });
+  </script>
+  
 </body>
 </html>
