@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  color: #876972;
 }
 
 body{
@@ -77,7 +78,7 @@ footer{
 
 /* 內頁列表 */
 ul{
-  margin: 1rem 0 1rem 6rem;
+  margin: 1rem 5rem;
 }
 /* 列表寬高 */
 .list-items{
@@ -124,6 +125,10 @@ ul{
 }
 
 /* 後台 列表的樣式 */
+
+.list{
+  width: 80%;
+}
 .list-header{
   display: flex;
   justify-content: space-evenly;
@@ -132,13 +137,11 @@ ul{
 }
 
 .list-header div{
-  width: calc(100% / 6);
-  padding: 0.5rem 1rem;
-  background: blue;
+  width: calc(100% / 5);
+  background: #876972;
   color: #ccc;
 }
-.list-items div{
-  width: calc(100% / 6);
+.list-items a div{
+  width: calc(100% / 5);
   padding: 0.5rem 1rem;
 }
-

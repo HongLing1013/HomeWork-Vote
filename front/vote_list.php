@@ -16,7 +16,7 @@ if(isset($_GET['filter'])){
 ?>
 <h1>投票列表</h1>
 <!-- 分類 -->
-<div>
+<div id="list">
   <label for="types">分類</label>
     <select name="types" id="types" onchange="location.href=`?filter=${this.value}<?=$p;?><?=$querystr;?>`">
       <option value="0">全部</option>
@@ -113,7 +113,7 @@ if(isset($_GET['filter'])){
     }
 
     $total= math('subjects','count','id',$filter);
-    $div=3;//每頁有幾筆資料
+    $div=5;//每頁有幾筆資料
     $pages=ceil($total/$div);//總頁數
     $now=isset($_GET['p'])?$_GET['p']:1;//如果沒有其他頁數就顯示第一頁
     $start=($now-1)*$div;

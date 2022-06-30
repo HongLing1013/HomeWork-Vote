@@ -68,6 +68,10 @@ footer{
 }
 
 /* 後台 列表的樣式 */
+
+.list{
+  width: 85%;
+}
 .list-header{
   display: flex;
   justify-content: space-evenly;
@@ -77,8 +81,7 @@ footer{
 
 .list-header div{
   width: calc(100% / 5);
-  padding: 0.5rem 1rem;
-  background: blue;
+  background: #876972;
   color: #ccc;
 }
 .list-items a div{
@@ -97,11 +100,10 @@ footer{
 }
 /* 滑鼠移到列表時 */
 .list-items:hover{
-  background-color: rgb(166, 245, 249);
   cursor: pointer;
 }
 .list{
-margin: 1rem 0 1rem 6rem;
+margin: 1rem 5rem;
 }
 .list a{
   text-decoration: none;
@@ -121,9 +123,13 @@ margin: 1rem 0 1rem 6rem;
   border: 1px solid #ccc;
 }
 
+#list{
+  margin-left: 20vh;
+
+}
 #types{
   padding: 0.25rem 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   border: 0;
-  border-bottom: 1px solid orange ;
+  border-bottom: 1px solid #876972 ;
 }
