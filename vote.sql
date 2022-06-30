@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-06-29 09:42:46
+-- 產生時間： 2022-06-30 08:22:16
 -- 伺服器版本： 10.4.24-MariaDB
 -- PHP 版本： 8.1.6
 
@@ -60,7 +60,9 @@ INSERT INTO `logs` (`id`, `user_id`, `subject_id`, `option_id`, `vote_time`) VAL
 (5, 0, 5, 22, '2022-06-29 04:01:45'),
 (6, 0, 5, 22, '2022-06-29 04:01:52'),
 (7, 0, 6, 28, '2022-06-29 04:02:07'),
-(8, 0, 5, 22, '2022-06-29 04:44:14');
+(8, 0, 5, 22, '2022-06-29 04:44:14'),
+(9, 0, 2, 4, '2022-06-30 05:31:15'),
+(10, 0, 2, 3, '2022-06-30 05:31:19');
 
 -- --------------------------------------------------------
 
@@ -82,8 +84,8 @@ CREATE TABLE `options` (
 INSERT INTO `options` (`id`, `option`, `subject_id`, `total`) VALUES
 (1, '美而美', 2, 1),
 (2, 'Qbuger', 2, 0),
-(3, '麥當勞', 2, 0),
-(4, 'MOS', 2, 0),
+(3, '麥當勞', 2, 1),
+(4, 'MOS', 2, 1),
 (5, '豆漿店', 2, 1),
 (6, '大腸麵線', 2, 0),
 (20, '夜店', 5, 0),
@@ -144,7 +146,7 @@ CREATE TABLE `subjects` (
 --
 
 INSERT INTO `subjects` (`id`, `subject`, `type_id`, `multiple`, `mulit_limit`, `start`, `end`, `total`) VALUES
-(2, '今天早餐吃什麼', 4, 0, 1, '2022-06-22', '2022-07-02', 2),
+(2, '今天早餐吃什麼', 4, 0, 1, '2022-06-22', '2022-07-02', 4),
 (5, '假日去哪玩', 4, 0, 1, '2022-06-23', '2022-07-03', 6),
 (6, '有養什麼寵物呢?', 4, 1, 1, '2022-06-23', '2022-07-03', 1),
 (7, '今天課程難不難', 4, 0, 1, '2022-06-23', '2022-07-03', 0),
@@ -198,7 +200,11 @@ INSERT INTO `users` (`id`, `acc`, `pw`, `name`, `birthday`, `addr`, `email`, `pa
 (3, 'mack', '1234', '阿明', '2000-02-03', '台北市', 'chaohongling1013@gmail.com', 0),
 (4, 'baby', '4321', 'baby', '2000-08-11', '台北市', 'tsubasababy1013@gmail.com', 1234),
 (5, 'mary', '81dc9bdb52d04dc2', 'mary', '1993-02-09', '新北市', 'tsubasababy1013@gmail.com', 0),
-(6, 'aaaa', '65ba841e01d6db7733e90a5b7f9e6f80', 'cccc', '1234-12-31', '123151', 'tsubasababy1013@gmail.com', 23415);
+(6, 'aaaa', '65ba841e01d6db7733e90a5b7f9e6f80', 'cccc', '1234-12-31', '123151', 'tsubasababy1013@gmail.com', 23415),
+(7, 'tsubasa', '81dc9bdb52d04dc20036dbd8313ed055', 'hollie', '2022-05-31', '台北市', 'tsubasababy1013@gmail.com', 1234),
+(9, 'ckckck', '4ed7837a2cae4e32a3b7f21cd483569d', 'ckckck', '2022-06-13', '台北市', 'tsubasababy1013@gmail.com', 0),
+(10, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', '2022-06-22', '台北市', 'tsubasababy1013@gmail.com', 0),
+(11, 'abcd', 'e2fc714c4727ee9395f324cd2e7f331f', 'abcd', '2022-06-09', '台北市', 'tsubasababy1013@gmail.com', 0);
 
 --
 -- 已傾印資料表的索引
@@ -254,7 +260,7 @@ ALTER TABLE `admins`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '序號', AUTO_INCREMENT=9;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '序號', AUTO_INCREMENT=11;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `options`
@@ -278,7 +284,7 @@ ALTER TABLE `types`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '序號', AUTO_INCREMENT=7;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '序號', AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
