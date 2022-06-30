@@ -9,6 +9,7 @@
   <style>
     .container{
       width: 120vh;
+      height: 85vh;
     }
     h2{
       margin-bottom: 1rem;
