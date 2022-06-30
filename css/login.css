@@ -20,14 +20,14 @@ nav{
 }
 
 .container{
-  width: 160vh;
+  width: 70vh;
   height: 80vh;
   background: white;
   margin: 0 auto;
   margin-top: 1vh;
   border-radius: 15px;
   overflow: hidden;
-  padding: 5vh 50vh;
+  padding: 5vh 3vh;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -60,6 +60,7 @@ footer{
 }
 
 .txtb input{
+  margin-top: 5vh;
   font-size: 15px;
   color: #ddd;
   border: none;
@@ -112,6 +113,7 @@ footer{
   cursor: pointer;
   transition: .5s;
   border-radius: 20px;
+  margin-top: 10vh;
 }
 
 .logbtn:hover{
@@ -119,7 +121,10 @@ footer{
 }
 
 .bottom-text{
-  margin-top: 60px;
+  margin-top: 15vh;
   text-align: center;
-  font-size: 13px;
+  font-size: 1rem;
+}
+.bottom-text a{
+  margin: 2rem;
 }
