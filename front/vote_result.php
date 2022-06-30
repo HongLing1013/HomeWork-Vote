@@ -12,6 +12,7 @@
   width: 100vh;
 }
 .logbtn{
+  width: 40%;
   margin-top: 1rem;
 }
   </style>
@@ -51,7 +52,7 @@ $opts=all("options",['subject_id'=>$_GET['id']]);
       <td><?=$opt['total'];?></td>
       <td>
         <!-- 長條圖 -->
-        <div style="display:inline-block;height:24px;background:skyblue;width:<?=300*$rate;?>px;"></div>
+        <div style="display:inline-block;height:24px;background-image: linear-gradient(to top, #fed6e3 0%, #a8edea 100%);width:<?=300*$rate;?>px;"></div>
         <?=($rate*100) . "%";?>
       </td>
     </tr>
@@ -65,7 +66,7 @@ $opts=all("options",['subject_id'=>$_GET['id']]);
     if (isset($_SESSION['user'])) {
     ?>
     <!-- 如果登入才顯示投票按鈕 -->
-          <button onclick="location.href='?do=vote&id=<?=$_GET['id'];?>'">我要投票</button>
+          <button class="logbtn" onclick="location.href='?do=vote&id=<?=$_GET['id'];?>'">我要投票</button>
     <?php
     }else{
       ?>
