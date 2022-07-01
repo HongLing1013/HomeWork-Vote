@@ -35,35 +35,35 @@
   <!-- 主要內容 -->
 <div class="container">
   
-  <form action="./add_member.php" method="post">
+  <form action="add_member.php" method="post">
     <h1>會員註冊</h1>
 
     <div class="txtb">
-      <input type="text" name="acc">
+      <input type="text" name="acc" id="">
       <span data-placeholder="帳號"></span>
     </div>
     <div class="txtb">
-      <input type="password" name="pw">
+      <input type="password" name="pw" id="">
       <span data-placeholder="密碼"></span>
     </div>
     <div class="txtb">
-      <input type="text" name="name">
+      <input type="text" name="name" id="">
       <span data-placeholder="名字"></span>
     </div>
     <div class="txtb">
-      <input type="date" name="birthday">
+      <input type="date" name="birthday" id="">
       <span data-placeholder="生日"></span>
     </div>
     <div class="txtb">
-      <input type="text" name="addr">
+      <input type="text" name="addr" id="">
       <span data-placeholder="住址"></span>
     </div>
     <div class="txtb">
-      <input type="email" name="email">
+      <input type="email" name="email" id="">
       <span data-placeholder="e-mail"></span>
     </div>
     <div class="txtb">
-      <input type="passnote" name="passnote">
+      <input type="passnote" name="passnote" id="">
       <span data-placeholder="密碼提示"></span>
     </div>
 

@@ -1,5 +1,5 @@
 <?php
-include_once "connect.php"; //連線資料庫
+include "connect.php"; //連線資料庫
 
 $pw=md5($_POST['pw']);//把密碼用MP5顯示
 $sql="INSERT INTO `users` (`acc`,`pw`,`name`,`birthday`,`addr`,`email`,`passnote`) 
