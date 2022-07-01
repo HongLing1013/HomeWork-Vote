@@ -35,7 +35,7 @@
   <!-- 主要內容 -->
 <div class="container">
   
-  <form action="add_member.php" method="post">
+  <form action="./add_member.php" method="post">
     <h1>會員註冊</h1>
 
     <div class="txtb">
