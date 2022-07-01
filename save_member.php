@@ -1,8 +1,9 @@
 <?php
 include_once "connect.php"; //連線資料庫
 
+$pw=md5($_POST['pw']);
 $sql="UPDATE `users` -- 更新資料表
-      SET    `pw`='{$_POST['pw']}',
+      SET    `pw`='$pw',
              `name`='{$_POST['name']}',
              `birthday`='{$_POST['birthday']}',
              `addr`='{$_POST['addr']}',

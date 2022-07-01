@@ -10,3 +10,4 @@ $pdo->exec($sql);
 header("location:login.php");
 
 ?>
+
