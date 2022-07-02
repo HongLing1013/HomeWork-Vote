@@ -57,7 +57,15 @@
   <!-- 主要內容 -->
 <div class="container">
   <h1>會員中心</h1>
-  <a class="remove" href="remove_acc.php?id=<?=$user['id'];?>">刪除帳號</a>
+
+  <?php
+ if($_SESSION['user']!='admin') {
+    ?>
+      <a class="remove" href="remove_acc.php?id=<?=$user['id'];?>">刪除帳號</a>
+      <?php
+      }
+      ?>
+
   <h2>歡迎<?=$_SESSION['user'];?></h2>
   <div>
     <span>序號：</span>
