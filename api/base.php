@@ -3,8 +3,12 @@ session_start();
 date_default_timezone_set('Asia/Taipei');
 
 function pdo(){
-    $dsn="mysql:host=localhost;charset=utf8;dbname=s1110208";
-    return new PDO($dsn,'s1110208','s1110208');
+
+    $dsn = "mysql:host=localhost;charset=utf8;dbname=vote";
+    return new PDO($dsn, 'root', '');
+
+    // $dsn="mysql:host=localhost;charset=utf8;dbname=s1110208";
+    // return new PDO($dsn,'s1110208','s1110208');
 }
 /**
  * $table - 資料表名稱 字串型式
