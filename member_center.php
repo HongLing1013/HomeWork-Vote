@@ -69,7 +69,7 @@
   </style>
 </head>
 <?php
-include "connect.php"; //連接資料庫
+include "./api/base.php"; //連接資料庫
 
 $sql = "select * from `users` where acc='{$_SESSION['user']}'";
 $user = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC); //導出資料

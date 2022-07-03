@@ -31,7 +31,7 @@
 <div class="container">
   <h1>編輯會員</h1>
   <?php
-    include_once "connect.php";
+    include_once "./api/base.php";
     $sql="SELECT * FROM users WHERE id='{$_POST['id']}'";
     $user=$pdo->query($sql)->fetch();
   ?>

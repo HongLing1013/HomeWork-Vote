@@ -1,6 +1,6 @@
 <?php
 
-include_once "connect.php";
+include_once "./api/base.php";
 
 $id=$_GET['id'];
 $sql="DELETE FROM `users` WHERE `id`='$id'";

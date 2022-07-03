@@ -1,5 +1,5 @@
 <?php
-include_once "connect.php"; //連線資料庫
+include_once "./api/base.php"; //連線資料庫
 
 $pw=md5($_POST['pw']);
 $sql="UPDATE `users` -- 更新資料表

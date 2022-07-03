@@ -1,5 +1,5 @@
 <?php
-include "connect.php";//連線資料庫
+include "./api/base.php";//連線資料庫
 
 $acc=$_POST['acc'];
 $pw=md5($_POST['pw']);//接收帳號密碼並且把密碼改成MD5

@@ -28,7 +28,7 @@ h2{
     <h1>密碼提示</h1>
 
     <?php
-include "connect.php";//連線資料庫
+include "./api/base.php";//連線資料庫
 
 $acc=$_POST['acc'];
 
