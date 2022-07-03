@@ -76,6 +76,10 @@ $opts=all("options",['subject_id'=>$_GET['id']]);
     <?php
     }
     ?>
+    <br>
+    <div style="text-align: center;">
+      <a href="index">回首頁</a>
+    </div>
 </div>
 
 </body>

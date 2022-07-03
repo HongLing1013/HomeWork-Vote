@@ -33,4 +33,8 @@ foreach ($opts as $opt) {
     <div>
       <input type="submit" class="logbtn" value="投票">
     </div>
+    <br>
+    <div style="text-align: center;">
+      <a href="index">回首頁</a>
+    </div>
 </form>
