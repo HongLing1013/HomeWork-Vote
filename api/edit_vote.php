@@ -26,12 +26,14 @@ $opts=all("options",['subject_id'=>$subject_id]);//取得資料表內原有的�
       $ot['option']=$opt;
       save("options",$ot);
     }else{
+      if($opt!=""){//避免空選項
       $add_option=[
         'option'=>$opt,
         'subject_id'=>$subject_id
       ];
       save("options",$add_option);
     }
+  }
   }
 
 to('../back.php');
