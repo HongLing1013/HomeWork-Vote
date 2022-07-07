@@ -16,7 +16,7 @@
   line-height: 0.5rem;
 }
 .txtb{
-  margin: 2rem 8rem;
+  margin: 1.3rem 8rem;
 }
 .txtb input{
   margin-top: 0.3vh;
