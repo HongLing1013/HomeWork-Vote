@@ -25,6 +25,24 @@
 .logbtn{
   margin-top: 5vh;
 }
+.inputBox{
+            position: relative;
+        }
+    #toggle {
+      position: absolute;
+      transform: translateY(20%);
+      width: 1.2rem;
+      height: 1.2rem;
+      background: url(./img/show.png);
+      background-size: cover;
+      cursor: pointer;
+      margin-left: 0.2rem;
+    }
+
+    #toggle.hide {
+      background: url(./img/hide.png);
+      background-size: cover;
+    }
   </style>
 </head>
 <body>
@@ -42,9 +60,11 @@
       <input type="text" name="acc" id="">
       <span data-placeholder="帳號"></span>
     </div>
-    <div class="txtb">
-      <input type="password" name="pw" id="">
-      <span data-placeholder="密碼"></span>
+    <div class="txtb inputBox">
+        <input type="password" name="pw" id="password">
+        <span data-placeholder="密碼"></span>
+      <!-- 偵測按下去時執行 function showHide的內容 -->
+      <span id="toggle" onclick="showHide();"></span>
     </div>
     <div class="txtb">
       <input type="text" name="name" id="">
@@ -85,6 +105,27 @@
       if($(this).val() == "")
       $(this).removeClass("focus");
     });
+  </script>
+
+<script>
+    // 宣告一個password 是id-password裡面的內容
+    const password = document.getElementById('password')
+    // 宣告一個toggle 是取得id toggle的內容
+    const toggle = document.getElementById('toggle')
+
+    // 設定一個function 叫做showHide
+    function showHide() {
+      // 如果 password的內容 跟 password相同時
+      if (password.type === 'password') {
+        // 設定為文本顯示
+        password.setAttribute('type', 'text')
+        toggle.classList.add('hide')
+      } else {
+        // 反之 隱藏密碼
+        password.setAttribute('type', 'password')
+        toggle.classList.remove('hide')
+      }
+    }
   </script>
   
 </body>
