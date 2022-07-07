@@ -43,27 +43,27 @@
       </tr>
       <tr>
         <td>密碼</td>
-        <td><input type="password" name="pw" value="<?=$user['pw'];?>"></td>
+        <td><input type="password" name="pw" value="<?=$user['pw'];?>" required="required"></td>
       </tr>
       <tr>
         <td>名稱</td>
-        <td><input type="text" name="name" value="<?=$user['name'];?>"></td>
+        <td><input type="text" name="name" value="<?=$user['name'];?>" required="required"></td>
       </tr>
       <tr>
         <td>生日</td>
-        <td><input type="date" name="birthday" value="<?=$user['birthday'];?>"></td>
+        <td><input type="date" name="birthday" value="<?=$user['birthday'];?>" required="required"></td>
       </tr>
       <tr>
         <td>住址</td>
-        <td><input type="text" name="addr" value="<?=$user['addr'];?>"></td>
+        <td><input type="text" name="addr" value="<?=$user['addr'];?>" required="required"></td>
       </tr>
       <tr>
         <td>email</td>
-        <td><input type="email" name="email" value="<?=$user['email'];?>"></td>
+        <td><input type="email" name="email" value="<?=$user['email'];?>" required="required"></td>
       </tr>
       <tr>
         <td>密碼提示</td>
-        <td><input type="text" name="passnote" value="<?=$user['passnote'];?>"></td>
+        <td><input type="text" name="passnote" value="<?=$user['passnote'];?>" required="required"></td>
       </tr>
     </table>
     <div>

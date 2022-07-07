@@ -57,33 +57,33 @@
     <h1>會員註冊</h1>
 
     <div class="txtb">
-      <input type="text" name="acc" id="">
+      <input type="text" name="acc" id="" required="required">
       <span data-placeholder="帳號"></span>
     </div>
     <div class="txtb inputBox">
-        <input type="password" name="pw" id="password">
+        <input type="password" name="pw" id="password" required="required">
         <span data-placeholder="密碼"></span>
       <!-- 偵測按下去時執行 function showHide的內容 -->
       <span id="toggle" onclick="showHide();"></span>
     </div>
     <div class="txtb">
-      <input type="text" name="name" id="">
+      <input type="text" name="name" id="" required="required">
       <span data-placeholder="名字"></span>
     </div>
     <div class="txtb">
-      <input type="date" name="birthday" id="">
+      <input type="date" name="birthday" id="" required="required">
       <span data-placeholder="生日"></span>
     </div>
     <div class="txtb">
-      <input type="text" name="addr" id="">
+      <input type="text" name="addr" id="" required="required">
       <span data-placeholder="住址"></span>
     </div>
     <div class="txtb">
-      <input type="email" name="email" id="">
+      <input type="email" name="email" id="" required="required">
       <span data-placeholder="e-mail"></span>
     </div>
     <div class="txtb">
-      <input type="passnote" name="passnote" id="">
+      <input type="passnote" name="passnote" id="" required="required">
       <span data-placeholder="密碼提示"></span>
     </div>
 
