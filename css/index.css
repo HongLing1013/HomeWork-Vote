@@ -27,7 +27,7 @@ nav{
   margin: 0 auto;
   margin-top: 5vh;
   border-radius: 15px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 h1{
