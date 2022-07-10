@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+
   <!-- 上方選單 -->
 <nav>
     <?php include "./layout/front_nav.php";?>

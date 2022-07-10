@@ -160,28 +160,58 @@ ul{
 .edit{
   display: inline-block;
   padding: 3px 12px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  box-shadow: 3px 3px 10px #aaa;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
   margin: 0 5px;
+  color: #504d78;
+  border-radius: 40px;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+              -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.5),
+              2px 2px 8px rgba(0, 0, 0, 0.15);
 }
 .edit:hover{
-  background: #504d78;
-  color: #fff;
+  background: rgb(31, 195, 187);
+  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+              inset -2px -2px 12px rgba(255, 255, 255, 5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
+.edit:hover:span{
+  display: inline-block;
+  transform: scale(0.98);
+}
+
 /* 列表的刪除按鈕 */
 .del{
   display: inline-block;
   padding: 3px 12px;
-  border: 1px solid #ccc;
-  border-radius: 1rem;
-  background: rgb(255, 117, 117);
-  box-shadow: 3px 3px 10px #aaa;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
   margin: 0 5px;
+  color: #504d78;
+  border-radius: 40px;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+              -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.5),
+              2px 2px 8px rgba(0, 0, 0, 0.15);
 }
 .del:hover{
-  background: #504d78;
-  color: #fff;
+  background: rgb(255, 117, 117);
+  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+              inset -2px -2px 12px rgba(255, 255, 255, 5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.del:hover:span{
+  display: inline-block;
+  transform: scale(0.98);
+  background: rgb(31, 195, 187);
+  color:green;
 }
 
 /* 後台 列表的樣式 */

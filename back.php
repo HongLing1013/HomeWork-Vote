@@ -73,8 +73,8 @@
             echo "<div class='text-center'>{$subject['total']}</div>";//投票總人數
 
             echo "<div class='text-center'>";//操作區
-            echo "<a class='edit' href='?do=edit&id={$subject['id']}'>編輯</a>";
-            echo "<a class='del' href='?do=del&id={$subject['id']}'>刪除</a>";
+            echo "<a class='edit' href='?do=edit&id={$subject['id']}'><span>編輯</span></a>";
+            echo "<a class='del' href='?do=del&id={$subject['id']}'><span>刪除</span></a>";
             echo "</div>";
             echo "</li>";
           }
