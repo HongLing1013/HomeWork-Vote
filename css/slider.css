@@ -81,7 +81,7 @@
 }
 .slider_container span {    
   color: #000;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
   position: absolute;
   left: 0%;
   top: 280px;
