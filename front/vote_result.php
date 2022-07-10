@@ -18,10 +18,7 @@
   </style>
 </head>
 <body>
-    <!-- 上方選單 -->
-<nav>
-    <?php include "./layout/header.php";?>
-  </nav>
+
   <!-- 主要內容 -->
 <div class="container">
 
