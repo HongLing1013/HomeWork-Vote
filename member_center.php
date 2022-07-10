@@ -78,8 +78,8 @@ $user = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC); //導出資料
 <body>
   <!-- 上方選單 -->
   <nav>
-    <?php include "./layout/header.php"; ?>
     <?php include "./layout/front_nav.php"; ?>
+    <script src="./js/nav.js"></script>
   </nav>
   <!-- 主要內容 -->
   <div class="container">

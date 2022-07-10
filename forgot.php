@@ -11,7 +11,8 @@
 <body>
   <!-- 上方選單 -->
 <nav>
-    <?php include "./layout/header.php";?>
+    <?php include "./layout/front_nav.php";?>
+    <script src="./js/nav.js"></script>
   </nav>
 
   <!-- 主要內容 -->

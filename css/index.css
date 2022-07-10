@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   color: #504d78;
+  word-wrap: break-word;
 }
 
 body{
@@ -11,21 +12,79 @@ body{
   background-image: linear-gradient(to top, #fed6e3 0%, #a8edea 100%);
 }
 
-nav{
+/* nav{
   height: 1rem;
   display: flex;
   justify-content: space-between;
   width: 20rem;
   margin-left: 55rem;
   margin-top: 1rem;
+} */
+
+/* nav 開始*/
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.6s;
+  padding: 1rem 6.25rem;
+  z-index: 2;
 }
+
+header.sticky{
+  padding: 0.31rem 6.25rem;
+  background: rgba(255, 255, 255, 0.434);
+}
+
+header .logo{
+  position: relative;
+  font-weight: 700;
+  color: #504d78;
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  transition: 0;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li{
+  position: relative;
+  list-style: none;
+}
+
+header ul li a{
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #504d78;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.5s;
+}
+
+header.sticky.logo,
+header.sticky ul li a{
+  color: #504d78;
+}
+/* nav 結束 */
 
 .container{
   width: 160vh;
   height: 80vh;
   background: white;
   margin: 0 auto;
-  margin-top: 5vh;
+  margin-top: 100vh;
   border-radius: 15px;
   overflow: auto;
 }
