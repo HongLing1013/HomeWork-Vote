@@ -16,7 +16,7 @@
   </nav>
 
   <!-- 主要內容 -->
-<div class="container">
+<div class="container" style="margin-top: 15vh;">
   <form action="chk_acc.php" method="post">
     <h1>忘記密碼</h1>
 

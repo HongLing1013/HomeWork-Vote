@@ -10,9 +10,14 @@ include_once "./api/base.php";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>問卷系統</title>
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/slider.css">
 </head>
 
-<body>
+<body style="height: 180vh;">
+
+<?php
+  include "./front/slider.php";
+?>
 
 <!-- 上方選單 -->
 <nav>

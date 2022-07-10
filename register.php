@@ -52,7 +52,7 @@
     <script src="./js/nav.js"></script>
   </nav>
   <!-- 主要內容 -->
-<div class="container">
+<div class="container" style="margin-top: 15vh;">
   
   <form action="./add_member.php" method="post">
     <h1>會員註冊</h1>

@@ -8,7 +8,6 @@
 }
 
 body{
-  height: 100vh;
   background-image: linear-gradient(to top, #fed6e3 0%, #a8edea 100%);
 }
 
@@ -85,7 +84,7 @@ header.sticky ul li a{
   height: 80vh;
   background: white;
   margin: 0 auto;
-  margin-top: 100vh;
+  margin-top: 15vh;
   border-radius: 15px;
   overflow: auto;
 }

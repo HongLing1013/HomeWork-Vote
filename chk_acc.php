@@ -24,7 +24,7 @@ h2{
     <script src="./js/nav.js"></script>
   </nav>
   <!-- 主要內容 -->
-<div class="container">
+<div class="container" style="margin-top: 15vh;">
   
     <h1>密碼提示</h1>
 

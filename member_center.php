@@ -82,7 +82,7 @@ $user = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC); //導出資料
     <script src="./js/nav.js"></script>
   </nav>
   <!-- 主要內容 -->
-  <div class="container">
+  <div class="container" style="margin-top: 15vh;">
     <h1>會員中心</h1>
 
     <?php
