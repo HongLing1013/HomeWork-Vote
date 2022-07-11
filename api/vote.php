@@ -14,7 +14,7 @@ if(is_array($_POST['opt'])){
       $subject['total']++;
       save("subjects",$subject);
     }
-    $log=['user_id'=>(isset($_SESSION['user']))?$_SESSION['user']:0,
+    $log=['user_id'=>(isset($_SESSION['user_id']))?$_SESSION['user_id']:0,
           'subject_id'=>$subject['id'],
           'option_id'=>$option['id']];
     save("logs",$log);
@@ -27,7 +27,7 @@ if(is_array($_POST['opt'])){
     $subject=find("subjects",$option['subject_id']);
     $subject['total']++;
     save("subjects",$subject);
-    $log=['user_id'=>(isset($_SESSION['user']))?$_SESSION['user']:0,
+    $log=['user_id'=>(isset($_SESSION['user_id']))?$_SESSION['user_id']:0,
           'subject_id'=>$subject['id'],
           'option_id'=>$option['id']];
     save("logs",$log);

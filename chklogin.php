@@ -11,6 +11,8 @@ $error='';
 
 if($chk){//如果資料庫有這一筆資料的話就是Ture
   $_SESSION['user']=$acc;//記錄使用者是誰 傳值到登入頁面
+  $_SESSION['user_id']=find('users',['acc'=>$acc])['id'];
+  // dd($_SESSION['id']);
   header("location:member_center.php");// 登入成功導向會員頁
 }else{
   $error="帳號密碼錯誤";
