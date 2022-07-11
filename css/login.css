@@ -187,3 +187,7 @@ footer{
 .bottom-text a{
   margin: 2rem;
 }
+
+::-webkit-scrollbar{
+  width: 0px;
+}

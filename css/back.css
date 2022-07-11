@@ -254,3 +254,7 @@ ul{
 .vote-sub{
   margin-top: 1rem;
 }
+
+::-webkit-scrollbar{
+  width: 0px;
+}
