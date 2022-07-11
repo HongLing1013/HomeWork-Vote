@@ -4,7 +4,7 @@
         <input type="text" name="name" id="name">
     </div>
 
-    <div>
+    <div style="margin-bottom: 10vh;">
       <input type="submit" class="logbtn" value="送出">
     </div>
 </form>
