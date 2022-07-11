@@ -118,6 +118,37 @@ if(isset($_GET['filter'])){
     $now=isset($_GET['p'])?$_GET['p']:1;//如果沒有其他頁數就顯示第一頁
     $start=($now-1)*$div;
     $page_rows=" limit $start,$div";
+?>
+
+
+
+    <div class="card_flex">
+
+    <div class="card rgb">
+      <div class="card-image card2"></div>
+      <div class="card-text card2">
+        <span class="date">1 week ago</span>
+        <h2>Post Two</h2>
+        <p>Adipisicing elit. Ducimus, repudiandae corrupti tialeno des ameto temporibus omnis provident illum maxime quod. Lorem ipsum dolor</p>
+      </div>
+      <div class="card-stats">
+        <div class="stat">
+          <div class="value">4<sup>m</sup></div>
+          <div class="type">read</div>
+        </div>
+        <div class="stat border">
+          <div class="value">5123</div>
+          <div class="type">views</div>
+        </div>
+        <div class="stat">
+          <div class="value">32</div>
+          <div class="type">comments</div>
+        </div>
+   </div>
+    </div>
+  </div>
+
+<?php
 
     $subjects = all('subjects',$filter, $orderStr . $page_rows); //取得所有投票列表
     foreach ($subjects as $subject) { //使用迴圈印內容
@@ -166,5 +197,11 @@ if(isset($_GET['filter'])){
 
       ?>
     </div>
-  
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"),{
+        glare: true,
+        reverse: true,
+        "max-glare": 0.15
+      });
+    </script>
 </div>

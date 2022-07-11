@@ -11,6 +11,8 @@ include_once "./api/base.php";
   <title>問卷系統</title>
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/slider.css">
+  <link rel="stylesheet" href="./css/card.css">
+  <script src="./js/vanilla-tilt.min.js"></script>
 </head>
 
 <body style="height: 180vh;">
