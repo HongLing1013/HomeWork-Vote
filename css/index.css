@@ -137,7 +137,6 @@ footer{
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  
 }
 
 .list-header div{
@@ -216,4 +215,21 @@ margin: 1rem 5rem;
 
 ::-webkit-scrollbar{
   width: 0px;
+}
+
+.line{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  color: white;
+}
+
+.line div{
+  width: calc(100% / 5);
+  background: #504d78;
+  color: #ccc;
+}
+
+.line div a{
+  color: #ccc;
 }

@@ -35,17 +35,17 @@ if(isset($_GET['filter'])){
   <!-- 投票列表 -->
     <div>
   <ul class="list">
-    <li class="list-header">
-      <div>投票主題：</div>
+    <li class="line">
+      <div style="border-radius: 15px 0 0 15px;">排序方式：</div>
       <!-- 單複選題排序 -->
       <?php
       if (isset($_GET['type']) && $_GET['type'] == 'asc') {
       ?>
-      <div><a href="?order=multiple&type=desc<?=$p;?><?=$queryfilter?>#container">單/複選題：</a></div>
+      <div><a href="?order=multiple&type=desc<?=$p;?><?=$queryfilter?>#container">單/複選題</a></div>
       <?php
       } else {
       ?>
-      <div><a href="?order=multiple&type=asc<?=$p;?><?=$queryfilter?>#container">單/複選題：</a></div>
+      <div><a href="?order=multiple&type=asc<?=$p;?><?=$queryfilter?>#container">單/複選題</a></div>
       <?php
       }
       ?>
@@ -54,11 +54,11 @@ if(isset($_GET['filter'])){
       <?php
       if (isset($_GET['type']) && $_GET['type'] == 'asc') {
       ?>
-      <div><a href="?order=end&type=desc<?=$p;?><?=$queryfilter?>#container">投票期間：</a></div>
+      <div><a href="?order=end&type=desc<?=$p;?><?=$queryfilter?>#container">投票期間</a></div>
       <?php
       } else {
       ?>
-      <div><a href="?order=end&type=asc<?=$p;?><?=$queryfilter?>#container">投票期間：</a></div>
+      <div><a href="?order=end&type=asc<?=$p;?><?=$queryfilter?>#container">投票期間</a></div>
       <?php
       }
       ?>
@@ -67,11 +67,11 @@ if(isset($_GET['filter'])){
       <?php
       if (isset($_GET['type']) && $_GET['type'] == 'asc') {
       ?>
-      <div><a href="?order=remain&type=desc<?=$p;?><?=$queryfilter?>#container">剩餘天數：</a></div>
+      <div><a href="?order=remain&type=desc<?=$p;?><?=$queryfilter?>#container">剩餘天數</a></div>
       <?php
       }else{
       ?>
-      <div><a href="?order=remain&type=asc<?=$p;?><?=$queryfilter?>#container">剩餘天數：</a></div>
+      <div><a href="?order=remain&type=asc<?=$p;?><?=$queryfilter?>#container">剩餘天數</a></div>
       <?php
       }
       ?>
@@ -80,11 +80,11 @@ if(isset($_GET['filter'])){
       <?php
       if (isset($_GET['type']) && $_GET['type'] == 'asc') {
       ?>
-        <div><a href='?order=total&type=desc<?=$p;?><?=$queryfilter?>#container'>投票人數：</a></div>
+        <div style="border-radius: 0 15px 15px 0;"><a href='?order=total&type=desc<?=$p;?><?=$queryfilter?>#container'>投票人數</a></div>
       <?php
       } else {
       ?>
-        <div><a href='?order=total&type=asc<?=$p;?><?=$queryfilter?>#container'>投票人數：</a></div>
+        <div style="border-radius: 0 15px 15px 0;"><a href='?order=total&type=asc<?=$p;?><?=$queryfilter?>#container'>投票人數</a></div>
       <?php
       }
       ?>
