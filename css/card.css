@@ -71,15 +71,16 @@
 }
 .card-text .date {
   color: rgb(255, 7, 110);
-  font-size:10px;
+  font-size:14px;
 }
 .card-text p {
+  margin-top:18px;
   color: grey;
   font-size:14px;
   font-weight: 200;
 }
 .card-text h2 {
-  margin-top:0px;
+  margin-top:3px;
   font-size:18px;
 }
 .card-stats {
