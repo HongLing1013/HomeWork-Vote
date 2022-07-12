@@ -123,8 +123,6 @@ if(isset($_GET['filter'])){
     foreach ($subjects as $subject) { //使用迴圈印內容
       echo "<a class='voteCard' href='?do=vote_result&id={$subject['id']}'>"; //要把投票帶去哪
    ?>
-
-
    <!-- 嘗試卡片 -->
 <div class="card_flex">
 
@@ -182,7 +180,7 @@ if(isset($_GET['filter'])){
 
 
 
-  
+  </ul>
   <!-- 列表分頁頁碼 -->
     <div class="text-center">
       <?php
