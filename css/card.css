@@ -2,12 +2,15 @@
   display: flex;
   overflow: hidden;
 }
+.voteCard{
+  display: inline-block;
+}
 .card {
   /* display: grid; */
   grid-template-columns: 180px;
   grid-template-rows: 0px 180px 50px;
   grid-template-areas: "image" "text" "stats";
-  border-radius: 18px;
+  border-radius: 8px;
   background: rgb(247, 247, 247);
   color:#504d78;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
@@ -20,7 +23,10 @@
 .rgb::after {
   content:"";
   background: linear-gradient(45deg,
-  #ff0000 0%, 
+  #fed6e3  50%,  
+  #a8edea 50% )
+
+  /* #ff0000 0%, 
   #ff9a00 10%,
   #d0de21 20%,
   #4fdc4a 30%, 
@@ -30,11 +36,11 @@
   #5f15f2 70%, 
   #ba0cf8 80%, 
   #fb07d9 90%, 
-  #ff0000 100%  )
+  #ff0000 100%  ) */
   repeat 0% 0% / 300% 100%;
   position: absolute;
   inset: -3px;
-  border-radius: 16px;
+  border-radius: 8px;
   filter: blur(8px);
   transform: translateZ(-1px); /*or z-index */
   animation: rgb 6s linear infinite;
@@ -45,7 +51,7 @@
   100% {background-position: 0% 50%;}
 }
 .js-tilt-glare {
-  border-radius: 18px;
+  border-radius: 8px;
 }
 .card-image {
   grid-area: image;
@@ -78,9 +84,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background:  #504d78 ;
 }
 .card-stats .stat {
   padding:10px;
@@ -91,8 +97,8 @@
   color: white;
 }
 .card-stats .border {
-  border-left: 1px solid rgb(172, 26, 87);
-  border-right: 1px solid rgb(172, 26, 87);
+  border-left: 1px solid #504d78;
+  border-right: 1px solid #504d78;
 }
 .card-stats .value{
   font-size:15px;
@@ -105,6 +111,7 @@
   font-size:11px;
   font-weight: 300;
   text-transform: uppercase;
+  color: white;
 }
 .card-image.card {
   background: linear-gradient(#fff 0%, #fff 70%, #fff 100%,url("https://picsum.photos/id/1/200/300"));
@@ -119,4 +126,10 @@
 }
 .card-stats.card {
   background: rgb(255, 77, 7);
+}
+div.value{
+  color: white
+}
+.text-center{
+  color: white;
 }

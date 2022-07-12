@@ -121,7 +121,7 @@ if(isset($_GET['filter'])){
 
     $subjects = all('subjects',$filter, $orderStr . $page_rows); //取得所有投票列表
     foreach ($subjects as $subject) { //使用迴圈印內容
-      echo "<a href='?do=vote_result&id={$subject['id']}'>"; //要把投票帶去哪
+      echo "<a class='voteCard' href='?do=vote_result&id={$subject['id']}'>"; //要把投票帶去哪
    ?>
    <!-- 嘗試卡片 -->
 <div class="card_flex">
