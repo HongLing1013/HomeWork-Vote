@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./css/back.css">
 </head>
 
-<body>
+<body style="overflow: hidden;">
   <!-- 上方選單 -->
   <nav>
     <?php include "./layout/back_nav.php"; ?>

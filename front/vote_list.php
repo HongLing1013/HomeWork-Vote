@@ -41,11 +41,11 @@ if(isset($_GET['filter'])){
       <?php
       if (isset($_GET['type']) && $_GET['type'] == 'asc') {
       ?>
-      <div><a href="?order=multiple&type=desc<?=$p;?><?=$queryfilter?>">單/複選題：</a></div>
+      <div><a href="?order=multiple&type=desc<?=$p;?><?=$queryfilter?>#container">單/複選題：</a></div>
       <?php
       } else {
       ?>
-      <div><a href="?order=multiple&type=asc<?=$p;?><?=$queryfilter?>">單/複選題：</a></div>
+      <div><a href="?order=multiple&type=asc<?=$p;?><?=$queryfilter?>#container">單/複選題：</a></div>
       <?php
       }
       ?>
@@ -54,11 +54,11 @@ if(isset($_GET['filter'])){
       <?php
       if (isset($_GET['type']) && $_GET['type'] == 'asc') {
       ?>
-      <div><a href="?order=end&type=desc<?=$p;?><?=$queryfilter?>">投票期間：</a></div>
+      <div><a href="?order=end&type=desc<?=$p;?><?=$queryfilter?>#container">投票期間：</a></div>
       <?php
       } else {
       ?>
-      <div><a href="?order=end&type=asc<?=$p;?><?=$queryfilter?>">投票期間：</a></div>
+      <div><a href="?order=end&type=asc<?=$p;?><?=$queryfilter?>#container">投票期間：</a></div>
       <?php
       }
       ?>
@@ -67,11 +67,11 @@ if(isset($_GET['filter'])){
       <?php
       if (isset($_GET['type']) && $_GET['type'] == 'asc') {
       ?>
-      <div><a href="?order=remain&type=desc<?=$p;?><?=$queryfilter?>">剩餘天數：</a></div>
+      <div><a href="?order=remain&type=desc<?=$p;?><?=$queryfilter?>#container">剩餘天數：</a></div>
       <?php
       }else{
       ?>
-      <div><a href="?order=remain&type=asc<?=$p;?><?=$queryfilter?>">剩餘天數：</a></div>
+      <div><a href="?order=remain&type=asc<?=$p;?><?=$queryfilter?>#container">剩餘天數：</a></div>
       <?php
       }
       ?>
@@ -80,11 +80,11 @@ if(isset($_GET['filter'])){
       <?php
       if (isset($_GET['type']) && $_GET['type'] == 'asc') {
       ?>
-        <div><a href='?order=total&type=desc<?=$p;?><?=$queryfilter?>'>投票人數：</a></div>
+        <div><a href='?order=total&type=desc<?=$p;?><?=$queryfilter?>#container'>投票人數：</a></div>
       <?php
       } else {
       ?>
-        <div><a href='?order=total&type=asc<?=$p;?><?=$queryfilter?>'>投票人數：</a></div>
+        <div><a href='?order=total&type=asc<?=$p;?><?=$queryfilter?>#container'>投票人數：</a></div>
       <?php
       }
       ?>
@@ -113,7 +113,7 @@ if(isset($_GET['filter'])){
     }
 
     $total= math('subjects','count','id',$filter);
-    $div=10;//每頁有幾筆資料
+    $div=8;//每頁有幾筆資料
     $pages=ceil($total/$div);//總頁數
     $now=isset($_GET['p'])?$_GET['p']:1;//如果沒有其他頁數就顯示第一頁
     $start=($now-1)*$div;

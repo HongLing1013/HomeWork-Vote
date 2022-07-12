@@ -28,7 +28,7 @@ include_once "./api/base.php";
   </nav>
 
   <!-- 主要內容 -->
-  <div class="container">
+  <div class="container" id="container">
 
     <?php
     if(isset($_GET['do'])){//如果有值可以取得檔案
