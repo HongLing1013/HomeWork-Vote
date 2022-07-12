@@ -1,7 +1,7 @@
 .card_flex {
   display: flex;
   /* overflow: hidden; */
-  height: 15rem;
+  height: 16rem;
   width: 14rem;
   margin-bottom: 5vh;
 }
@@ -9,7 +9,7 @@
   display: inline-block;
 }
 .card {
-  /* display: grid; */
+  display: grid;
   grid-template-columns: 180px;
   grid-template-rows: 0px 180px 50px;
   grid-template-areas: "image" "text" "stats";
