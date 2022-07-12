@@ -1,7 +1,7 @@
 .card_flex {
   display: flex;
   /* overflow: hidden; */
-  height: 16rem;
+  height: 18.1rem;
   width: 14rem;
   margin-bottom: 5vh;
 }
@@ -16,7 +16,7 @@
   border-radius: 8px;
   background: rgb(247, 247, 247);
   color:#504d78;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  /* box-shadow: 5px 5px 15px rgba(0,0,0,0.9); */
   text-align: justify;
   cursor: pointer;
   margin:30px;
