@@ -1,8 +1,9 @@
 .card_flex {
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 15rem;
-  width: 17rem;
+  width: 14rem;
+  margin-bottom: 5vh;
 }
 .voteCard{
   display: inline-block;

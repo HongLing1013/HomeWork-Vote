@@ -113,7 +113,7 @@ if(isset($_GET['filter'])){
     }
 
     $total= math('subjects','count','id',$filter);
-    $div=8;//每頁有幾筆資料
+    $div=10;//每頁有幾筆資料
     $pages=ceil($total/$div);//總頁數
     $now=isset($_GET['p'])?$_GET['p']:1;//如果沒有其他頁數就顯示第一頁
     $start=($now-1)*$div;
@@ -123,6 +123,8 @@ if(isset($_GET['filter'])){
     foreach ($subjects as $subject) { //使用迴圈印內容
       echo "<a class='voteCard' href='?do=vote_result&id={$subject['id']}'>"; //要把投票帶去哪
    ?>
+
+
    <!-- 嘗試卡片 -->
 <div class="card_flex">
 
@@ -180,7 +182,7 @@ if(isset($_GET['filter'])){
 
 
 
-  </ul>
+  
   <!-- 列表分頁頁碼 -->
     <div class="text-center">
       <?php
