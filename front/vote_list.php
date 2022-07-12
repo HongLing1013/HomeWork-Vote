@@ -118,70 +118,67 @@ if(isset($_GET['filter'])){
     $now=isset($_GET['p'])?$_GET['p']:1;//如果沒有其他頁數就顯示第一頁
     $start=($now-1)*$div;
     $page_rows=" limit $start,$div";
-?>
-
-
-
-    <div class="card_flex">
-
-    <div class="card rgb">
-      <div class="card-image card2"></div>
-      <div class="card-text card2">
-        <span class="date">1 week ago</span>
-        <h2>Post Two</h2>
-        <p>Adipisicing elit. Ducimus, repudiandae corrupti tialeno des ameto temporibus omnis provident illum maxime quod. Lorem ipsum dolor</p>
-      </div>
-      <div class="card-stats">
-        <div class="stat">
-          <div class="value">4<sup>m</sup></div>
-          <div class="type">read</div>
-        </div>
-        <div class="stat border">
-          <div class="value">5123</div>
-          <div class="type">views</div>
-        </div>
-        <div class="stat">
-          <div class="value">32</div>
-          <div class="type">comments</div>
-        </div>
-   </div>
-    </div>
-  </div>
-
-<?php
 
     $subjects = all('subjects',$filter, $orderStr . $page_rows); //取得所有投票列表
     foreach ($subjects as $subject) { //使用迴圈印內容
       echo "<a href='?do=vote_result&id={$subject['id']}'>"; //要把投票帶去哪
-      echo "<li class='list-items'>";
-      echo "<div>{$subject['subject']}</div>"; //只取得欄位
+   ?>
+   <!-- 嘗試卡片 -->
+<div class="card_flex">
 
-      if ($subject['multiple'] == 0) {
-        echo "<div class='text-center'>單選題</div>";
-      } else {
-        echo "<div class='text-center'>複選題</div>";
-      }
+<div class="card rgb">
+  <div class="card-image card2"></div>
+  <div class="card-text card2">
+    <span class="date">
+      <?php
+            $today = strtotime("now");
+            $end = strtotime($subject['end']);
+            if (($end - $today) > 0) { //如果投票還在進行
+              $remain = floor(($end - $today) / (60 * 60 * 24));
+              echo "倒數" . $remain . "天結束";
+            } else { //如果投票已經截止
+              echo "<span style='color:grey;'>投票已截止</span>";
+            }
+            ?>
+    </span>
+    <h2><?=$subject['subject'];?></h2>
+    <p><?=$subject['start']."<br>~<br>".$subject['end'];?></p>
+  </div>
+  <div class="card-stats">
+    <div class="stat">
+      <div class="value">
+        <?php
+              if ($subject['multiple'] == 0) {
+                echo "<div class='text-center'>單選題</div>";
+              } else {
+                echo "<div class='text-center'>複選題</div>";
+              }
+        ?>
+      </div>
+      <div class="type"></div>
+    </div>
+    <div class="stat border">
+      <div class="value">
+        <?=$subject['total'];?>
+      </div>
+      <div class="type">total</div>
+    </div>
+    <!-- <div class="stat">
+      <div class="value">32</div>
+      <div class="type">comments</div>
+    </div> -->
+</div>
+</div>
+</div>
 
-      echo "<div class='text-center'>"; //投票開始與結束時間
-      echo $subject['start'] . "~" . $subject['end'];
-      echo "</div>";
+<!-- 嘗試卡片 -->
 
-      echo "<div class='text-center'>"; //投票剩餘天數
-      $today = strtotime("now");
-      $end = strtotime($subject['end']);
-      if (($end - $today) > 0) { //如果投票還在進行
-        $remain = floor(($end - $today) / (60 * 60 * 24));
-        echo "倒數" . $remain . "天結束";
-      } else { //如果投票已經截止
-        echo "<span style='color:grey;'>投票已截止</span>";
-      }
-      echo "</div>";
-
-      echo "<div class='text-center'>{$subject['total']}</div>"; //投票總人數
-      echo "</li>";
+   <?php
       echo "</a>";
     }
     ?>
+
+
 
   </ul>
   <!-- 列表分頁頁碼 -->

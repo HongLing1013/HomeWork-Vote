@@ -87,7 +87,7 @@ header.sticky ul li a{
   margin-top: 2vh;
   border-radius: 15px;
   overflow: auto;
-  display: flex;
+  /* display: flex; */
 }
 
 h1{

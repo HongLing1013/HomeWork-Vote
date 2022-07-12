@@ -3,7 +3,7 @@
   overflow: hidden;
 }
 .card {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 180px;
   grid-template-rows: 0px 180px 50px;
   grid-template-areas: "image" "text" "stats";
@@ -76,7 +76,7 @@
 .card-stats {
   grid-area: stats; 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
