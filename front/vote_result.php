@@ -58,13 +58,13 @@ $opts=all("options",['subject_id'=>$_GET['id']]);
     ?>
     <!-- 如果登入才顯示投票按鈕 -->
     <?php
-    if(!empty($_SESSION['user_id'])){
-      echo "<h1 style='color:red;margin-top:5vh'>不能重複投票</h1>";
-    }else{
-      ?>
+    // if(!empty($_SESSION['user_id'])){
+    //   echo "<h1 style='color:red;margin-top:5vh'>不能重複投票</h1>";
+    // }else{
+    //   ?>
           <button class="logbtn" onclick="location.href='?do=vote&id=<?=$_GET['id'];?>'">我要投票</button>
     <?php
-    }
+    // }
     }else{
       ?>
     <div>
